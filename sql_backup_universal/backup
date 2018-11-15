@@ -1,0 +1,11 @@
+Defaults:backup !requiretty
+
+backup ALL=(ALL) NOPASSWD:/usr/bin/innobackupex
+backup ALL=(ALL) NOPASSWD:/usr/bin/mysqldump
+backup ALL=(ALL) NOPASSWD:/bin/ls
+backup ALL=(ALL) NOPASSWD:/bin/rm -rf /opt/backup_sql_2*
+backup ALL=(ALL) NOPASSWD:/bin/mkdir -p /opt/*
+backup ALL=(ALL) NOPASSWD:/bin/chown -R backup.backup /opt/*
+backup ALL=(ALL) NOPASSWD:/bin/chown -R postgres.postgres /opt/*
+backup ALL=(ALL) NOPASSWD:/bin/df
+backup ALL=(ALL) NOPASSWD:/usr/bin/du
